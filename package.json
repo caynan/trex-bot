@@ -4,7 +4,12 @@
   "description": "An Artificial Intelligence to Play Google's Dinosaur Game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",å
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "webpack --env.prod -p",
+    "prebuild:dev": "rimraf dist",
+    "build:dev": "webpack --env.dev",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
