@@ -4,6 +4,8 @@
 
 export default Runner
 
+  let r;
+
 /**
  * T-Rex runner.
  * @param {string|Element} outerContainerId Outer containing element id 或者是这个元素本身
@@ -58,6 +60,9 @@ function Runner( outerContainerId, opt_config ) {
   this.imagesLoaded = 0;
 
   this.loadImages();
+
+  //FIX: I'm attaching the object to the global environment (window), it might be a good a idea to fix this one day :)
+  window.RUNNER = this
 }
 
 /**
