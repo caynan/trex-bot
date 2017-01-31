@@ -62,7 +62,9 @@ function Runner( outerContainerId, opt_config ) {
   this.loadImages();
 
   //FIX: I'm attaching the object to the global environment (window), it might be a good a idea to fix this one day :)
-  window.RUNNER = this
+  window.RUNNER = this;
+
+  return window.RUNNER;
 }
 
 /**
