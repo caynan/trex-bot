@@ -62,7 +62,9 @@ function Runner( outerContainerId, opt_config ) {
   this.loadImages();
 
   //FIX: I'm attaching the object to the global environment (window), it might be a good a idea to fix this one day :)
-  window.RUNNER = this
+  window.RUNNER = this;
+
+  return window.RUNNER;
 }
 
 /**
@@ -777,7 +779,8 @@ Runner.prototype = {
   onVisibilityChange: function ( e ) {
     if ( document.hidden || document.webkitHidden || e.type == 'blur' ||
       document.visibilityState != 'visible' ) {
-      this.stop();
+      // FIXME: We're not stopping the game if the browser is out of focus
+      // this.stop();
     } else if ( !this.crashed ) {
       this.tRex.reset();
       this.play();
