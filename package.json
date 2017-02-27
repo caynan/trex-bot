@@ -35,5 +35,9 @@
     "webpack-config-utils": "2.3.0",
     "webpack-dev-server": "1.16.2",
     "webpack-validator": "2.3.0"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "enumify": "^1.0.4"
   }
 }

@@ -779,7 +779,8 @@ Runner.prototype = {
   onVisibilityChange: function ( e ) {
     if ( document.hidden || document.webkitHidden || e.type == 'blur' ||
       document.visibilityState != 'visible' ) {
-      this.stop();
+      // FIXME: We're not stopping the game if the browser is out of focus
+      // this.stop();
     } else if ( !this.crashed ) {
       this.tRex.reset();
       this.play();

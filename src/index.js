@@ -11,5 +11,6 @@ setInterval(() => {
   if (trex.isActive()) {
     console.log(trex.toString())
     console.log(obstacle.toString())
+    trex.executeAction("DUCKING")
   }
 }, 1000)
